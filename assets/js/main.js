@@ -1,7 +1,7 @@
 const navMenu = document.getElementById('nav-menu')
 const toggleMenu = document.getElementById('nav-toggle')
 const closeMenu = document.getElementById('nav-close')
-const navLink = document.querySelectorAll('.nav__link')
+const navLink = document.querySelectorAll('.nav-link')
 
 /* Swiper */
 
