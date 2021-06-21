@@ -35,7 +35,30 @@ let swiper2 = new Swiper('#sermon-slideshow', {
 
 let swiper3 = new Swiper('#testimonial-slideshow', {
   cssMode: true,
-  spaceBetween: 12,
+  spaceBetween: 8,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    568: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+  },
+  mousewheel: true,
+  keyboard: true,
+})
+
+let swiper4 = new Swiper('#activities-slideshow', {
+  cssMode: true,
+  spaceBetween: 8,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
