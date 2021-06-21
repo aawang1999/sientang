@@ -32,7 +32,7 @@
 
 @media screen and (min-width: 768px) {
   :root {
-    --h1-font-size: 1.75rem;
+    --h1-font-size: 2rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
@@ -127,6 +127,10 @@ img {
   text-align: center;
   font-weight: var(--font-bold);
   margin-bottom: 0.25rem;
+}
+
+.content {
+  padding: 0 0.5rem;
 }
 
 /* =============== BUTTONS =============== */
@@ -271,29 +275,6 @@ img {
   overflow: initial;
 }
 
-.content {
-  padding: 0 0.5rem;
-}
-
-.slideshow-img {
-  width: 100%;
-  border-radius: 0.5rem;
-  justify-self: center;
-}
-
-.slideshow-title, .testimonial-name {
-  font-size: var(--h3-font-size);
-  margin-bottom: var(--mb-1);
-}
-
-.slideshow-description, .testimonial-description {
-  margin-bottom: 0.75rem;
-}
-
-.slideshow-button:hover .button__icon {
-  transform: translateX(0.25rem);
-}
-
 .swiper-button-next::after, .swiper-button-prev::after {
   content: '';
 }
@@ -303,16 +284,6 @@ img {
   color: var(--first-color);
 }
 
-/*
-.swiper-button-prev {
-  left: -0.5rem;
-}
-
-.swiper-button-next {
-  right: -0.5rem;
-}
-*/
-
 .swiper-container-horizontal > .swiper-pagination-bullets {
   bottom: -2.5rem;
 }
@@ -321,23 +292,41 @@ img {
   background-color: var(--first-color);
 }
 
+.slideshow-img {
+  width: 100%;
+  border-radius: 0.5rem;
+  justify-self: center;
+}
+
+.slideshow-title {
+  font-size: var(--h3-font-size);
+  margin-bottom: var(--mb-1);
+}
+
+.slideshow-description {
+  margin-bottom: 0.75rem;
+}
+
+.slideshow-button:hover .button__icon {
+  transform: translateX(0.25rem);
+}
+
 /* =============== TESTIMONIAL =============== */
 
 .testimonial-img {
   border-radius: 0.5rem;
+  margin-bottom: var(--mb-2);
+}
+
+.testimonial-date {
+  font-size: var(--small-font-size);
+  margin-bottom: var(--mb-1);
 }
 
 /* =============== INFO 關於我們、奉獻支持 =============== */
 
-.info-container {
-  row-gap: 2rem;
-}
-
-.info-data {
-  text-align: center;
-}
-
 .info-description {
+  text-align: center;
   margin-bottom: var(--mb-4);
 }
 
@@ -540,6 +529,12 @@ img {
     color: var(--white-color);
   }
 
+  /* =============== INFO 關於我們、奉獻支持 =============== */
+
+  .info-description {
+    text-align: left;
+  }
+
   /* =============== SLIDESHOW =============== */
 
   .content {
@@ -581,13 +576,5 @@ img {
   .bd-grid {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .swiper-button-prev {
-    left: -1.5rem;
-  }
-
-  .swiper-button-next {
-    right: -1.5rem;
   }
 }
