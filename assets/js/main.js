@@ -5,78 +5,51 @@ const navLink = document.querySelectorAll('.nav-link')
 
 /* =============== SWIPER =============== */
 
-let swiper1 = new Swiper('#top-slideshow', {
-  cssMode: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  mousewheel: true,
-  keyboard: true,
+const swipers = []
+
+$('.swiper-fold').each(function (index, element) {
+  $(this).addClass('sf' + index)
+  let swiper = new Swiper('.sf' + index, {
+    cssMode: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    mousewheel: true,
+    keyboard: true,
+  })
+  swipers.push(swiper)
 })
 
-let swiper2 = new Swiper('#sermon-slideshow', {
-  cssMode: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  mousewheel: true,
-  keyboard: true,
-})
-
-let swiper3 = new Swiper('#testimonial-slideshow', {
-  cssMode: true,
-  spaceBetween: 8,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  breakpoints: {
-    568: {
-      slidesPerView: 2,
+$('.swiper-card').each(function (index, element) {
+  $(this).addClass('sc' + index)
+  let swiper = new Swiper('.sc' + index, {
+    cssMode: true,
+    spaceBetween: 8,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
-    768: {
-      slidesPerView: 3,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
     },
-  },
-  mousewheel: true,
-  keyboard: true,
-})
-
-let swiper4 = new Swiper('#activities-slideshow', {
-  cssMode: true,
-  spaceBetween: 8,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  breakpoints: {
-    568: {
-      slidesPerView: 2,
+    breakpoints: {
+      568: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 3,
+      },
     },
-    768: {
-      slidesPerView: 3,
-    },
-  },
-  mousewheel: true,
-  keyboard: true,
+    mousewheel: true,
+    keyboard: true,
+  })
+  swipers.push(swiper)
 })
 
 /* =============== FUNCTIONS =============== */
